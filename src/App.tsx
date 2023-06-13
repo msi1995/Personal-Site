@@ -4,7 +4,7 @@ import { EntryPage } from "./components/EntryPage";
 import selfimg from "./video/headshot02.png";
 import cueLogo from "./video/cuelogo.jpg";
 import beaverLogo from "./video/beaverLogo.png";
-import housepartyLogo from "./video/housepartyLogo.png";
+import atriumLogo from "./video/atrium.png";
 import linkedinLogo from "./video/linkedinLogo.png";
 import pythonLogo from "./video/pythonLogo.png";
 import reactLogo from "./video/reactLogo.png";
@@ -142,12 +142,11 @@ function App() {
                   </div>
                   <div className="wps-entry">
                     <p className="entry-title">
-                      <img className="standardLogo" src={housepartyLogo}></img>
-                      Houseparty — (2020)
+                      <img className="standardLogo" src={atriumLogo}></img>
+                      Atrium — (2019)
                     </p>
                     <p className="entry-info">
-                      SWE Intern working on internal tooling as well as video functionality,
-                      bug fixes, and documentation.
+                      SWE Intern working on bug fixes, frontend components, and documentation.
                     </p>
                   </div>
                 </div>

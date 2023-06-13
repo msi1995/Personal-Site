@@ -17,6 +17,7 @@ function App() {
   const [entryPageActive, setEntryPageActive] = useState<boolean>(true);
   const [animationComplete, setAnimationComplete] = useState<boolean>(false);
   const exitAudio = new Audio("/exit.mp3");
+  exitAudio.volume = 0.3;
 
   const doExitThings = async () => {
     await exitAudio.play();

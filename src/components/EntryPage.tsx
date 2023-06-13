@@ -14,7 +14,7 @@ export const EntryPage = ({ setEntryPageActive, showQuestion }: EntryPageProps) 
   }
 
   const doEntryThings = async () => {
-    playEntryAudio();
+    await playEntryAudio();
     setEntryPageActive(false);
   };
 

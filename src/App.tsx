@@ -26,7 +26,7 @@ function App() {
     if (!entryPageActive) {
       const timer = setTimeout(() => {
         setAnimationComplete(true);
-      }, 2500);
+      }, 4200);
       return () => clearTimeout(timer);
     } else {
       setAnimationComplete(false);

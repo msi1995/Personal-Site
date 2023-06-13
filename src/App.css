@@ -303,7 +303,7 @@ body {
   height: 100%;
   background-color: black;
   z-index: 9999;
-  animation: fade-in 2.2s ease-out forwards;
+  animation: fade-in 4s ease-out forwards;
 }
 
 .fade-in-overlay::after {
@@ -313,7 +313,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, rgb(17, 39, 10), rgb(31, 65, 21, 0));
 }
 
 @keyframes fade-in {

@@ -11,6 +11,7 @@ export const EntryPage = ({ setEntryPageActive, showQuestion }: EntryPageProps) 
 
   const doEntryThings = async () => {
     await entryAudio.play()
+    await new Promise((resolve) => setTimeout(resolve, 300));
     setEntryPageActive(false);
   }
 

@@ -4,7 +4,7 @@ import { EntryPage } from "./components/EntryPage";
 import selfimg from "./video/headshot02.png";
 import cueLogo from "./video/cuelogo.jpg";
 import beaverLogo from "./video/beaverLogo.png";
-import oracleLogo from "./video/oracleLogo.png";
+import housepartyLogo from "./video/housepartyLogo.png";
 import linkedinLogo from "./video/linkedinLogo.png";
 import pythonLogo from "./video/pythonLogo.png";
 import reactLogo from "./video/reactLogo.png";
@@ -142,18 +142,12 @@ function App() {
                   </div>
                   <div className="wps-entry">
                     <p className="entry-title">
-                      <img className="standardLogo" src={oracleLogo}></img>
-                      <a
-                        className="links3"
-                        href="https://www.oracle.com/"
-                        target="_blank"
-                      >
-                        Oracle — (2021)
-                      </a>
+                      <img className="standardLogo" src={housepartyLogo}></img>
+                      Houseparty — (2020)
                     </p>
                     <p className="entry-info">
-                      SWE Intern working on internal tooling, as well as small
-                      bug fixes and documentation revisions.
+                      SWE Intern working on internal tooling as well as video functionality,
+                      bug fixes, and documentation.
                     </p>
                   </div>
                 </div>

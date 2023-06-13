@@ -6,6 +6,9 @@ import cueLogo from "./video/cuelogo.jpg";
 import beaverLogo from "./video/beaverLogo.png";
 import oracleLogo from "./video/oracleLogo.png";
 import linkedinLogo from "./video/linkedinLogo.png";
+import pythonLogo from "./video/pythonLogo.png";
+import reactLogo from "./video/reactLogo.png";
+import crowdcontrolLogo from "./video/crowdcontrolLogo.png";
 import githubLogo from "./video/githubLogo.png";
 import resumeLogo from "./video/resumeLogo.png";
 import Resume from "./files/Lloyd_Doug_ResumeA.pdf";
@@ -138,7 +141,7 @@ function App() {
                   </div>
                   <div className="wps-entry">
                     <p className="entry-title">
-                      <img className="oracleLogo" src={oracleLogo}></img>
+                      <img className="standardLogo" src={oracleLogo}></img>
                       <a
                         className="links3"
                         href="https://www.oracle.com/"
@@ -158,7 +161,7 @@ function App() {
                 Projects
                 <div className="flex-wrap ws-entry-container">
                   <div className="wps-entry">
-                    <p className="entry-title">Python + Selenium Bot</p>
+                    <p className="entry-title"><img className="standardLogo" src={pythonLogo}/>Python + Selenium Bot</p>
                     <p className="entry-info">
                       My first ever Python project way back in 2020. I wrote a
                       Selenium bot to navigate a complex reservation process to
@@ -167,7 +170,7 @@ function App() {
                     </p>
                   </div>
                   <div className="wps-entry">
-                    <p className="entry-title">CrowdControl (WIP)</p>
+                    <p className="entry-title"><img className="crowd-control-logo" src={crowdcontrolLogo}/>CrowdControl (WIP)</p>
                     <p className="entry-info">
                       I tried my hand at React Native with CrowdControl. Aimed
                       at improving live event/festival safety by connecting
@@ -176,7 +179,7 @@ function App() {
                     </p>
                   </div>
                   <div className="wps-entry">
-                    <p className="entry-title">NBA Game Finder</p>
+                    <p className="entry-title"><img className="react-logo" src={reactLogo}/>NBA Game Finder</p>
                     <p className="entry-info">
                       React SPA that allows users to select and fetch info about
                       a team and their games played in a desired season. Made

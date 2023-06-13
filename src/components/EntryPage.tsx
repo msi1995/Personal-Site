@@ -9,14 +9,10 @@ export const EntryPage = ({ setEntryPageActive, showQuestion }: EntryPageProps) 
   const [isHovered, setIsHovered] = useState(false);
   const entryAudio = new Audio("/entry.mp3")
 
-  const playEntryAudio = () => {
-    entryAudio.play()
-  }
-
   const doEntryThings = async () => {
-    await playEntryAudio();
+    await entryAudio.play()
     setEntryPageActive(false);
-  };
+  }
 
   return (
     <div id="bg-container" className="anim-bg">

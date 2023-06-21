@@ -295,18 +295,31 @@ body {
   color: black;
 }
 
+
+.linkedin{
+  transition: transform 0.4s ease;
+}
+
 .linkedin:hover{
-  transform: scale(1.1);
+  transform: translate(0px, -10px);
   cursor: pointer;
+}
+
+.github{
+  transition: transform 0.4s ease;
 }
 
 .github:hover{
-  transform: scale(1.1);
+  transform: translate(0px, -10px);
   cursor: pointer;
 }
 
+.resume{
+  transition: transform 0.4s ease;
+}
+
 .resume:hover{
-  transform: scale(1.1);
+  transform: translate(0px, -10px);
   cursor: pointer;
 }
 

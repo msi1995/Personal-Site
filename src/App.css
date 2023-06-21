@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color:rgba(247, 252, 255, 0.9);
+  background-color:rgb(255, 255, 255);
   overflow-x: hidden;
 }
 
@@ -70,8 +70,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 40px;
-  background-image: linear-gradient(to bottom, #247009, #020602);
+  height: 45px;
+  background-image: linear-gradient(to bottom, rgba(17,66,0,1), rgba(0,255,0,1));
   background-repeat: no-repeat;
   background-size: 100% 200%;
   background-position: center top;
@@ -80,16 +80,15 @@ body {
 
 .top-bar-text {
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  font-weight:400;
-  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-weight:500;
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 .top-bar-text:hover{
   font-family: Arial, Helvetica, sans-serif;
-  font-weight:400;
-  font-size: 16px;
-  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  /* text-shadow: 2px 2px 2px rgb(0, 0, 0); */
   cursor: pointer;
 }
 
@@ -183,7 +182,7 @@ body {
   font-size: 24px;
   font-style: italic;
   width: 100%;
-  color: rgba(0, 0, 0, 0.35)
+  color: rgba(0, 0, 0, 0.3)
 }
 
 .ws-entry-container{

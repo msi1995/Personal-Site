@@ -149,7 +149,7 @@ body {
   display: block;
   width: 80%;
   padding-bottom: 4em;
-  @media (min-width: 768px){
+  @media (min-width: 1000px){
     width: 55rem; 
     padding: 2em;
     padding-bottom: 2em;
@@ -184,7 +184,7 @@ body {
 .main-content{
   height: auto;
   width: 80%;
-  @media (min-width: 768px){
+  @media (min-width: 1000px){
     width: 75rem;
     padding-left: 4em;
   }

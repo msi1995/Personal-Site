@@ -46,7 +46,7 @@ export const LandingPage = () => {
         <>
           <div className="top-bar">
             <span className="top-bar-text" onClick={() => doExitThings()}>
-              Leave
+              EXIT
             </span>
           </div>
           {!animationComplete && <div className="fade-in-overlay"></div>}

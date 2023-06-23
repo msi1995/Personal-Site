@@ -12,7 +12,7 @@ export const Spotlight: React.FC = () => {
       const { clientX = 0, clientY = 0  } = event;
 
       setTimeout(() => {
-        spotlight.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 20px, #00000050 350px)`;
+        spotlight.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 20px, #0000006a 350px)`;
       }, 75);
     };
 

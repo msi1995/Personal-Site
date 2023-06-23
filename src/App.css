@@ -13,10 +13,11 @@
 body {
   background-color:rgb(0, 0, 0);
   overflow-x: hidden;
+  z-index: 5;
 }
 
 .sc-bg{
-  @media(min-width: 1920px) {
+  @media(min-width: 1600px) {
     position: fixed;
     margin-right: -5em;
     bottom: 0;
@@ -28,7 +29,25 @@ body {
     background-repeat: no-repeat;
     opacity: 0.15;
     transition: opacity 1s;
-    z-index: 0;  
+    z-index: 4;
+  }
+}
+
+.sc-bg{
+  @media screen and (min-width: 1100px) and (max-width: 1600px){
+    position: fixed;
+    margin-right: -15em;
+    margin-bottom: -15em;
+    bottom: 0;
+    right: 0;
+    width: 35em;
+    height: 50em;
+    background-image: url("./assets/sclarge.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    transition: opacity 1s;
+    z-index: 4;
   }
 }
 
@@ -198,10 +217,12 @@ body {
 .main-content{
   height: auto;
   width: 80%;
-  @media (min-width: 1000px){
+  @media (min-width: 1400px){
     width: 75rem;
     padding-left: 4em;
   }
+  
+  
 }
 
 .section{
@@ -219,6 +240,7 @@ body {
 
 .wps-entry{
   width: 13em !important;
+  z-index: 7;
 }
 
 .entry-title {
@@ -366,7 +388,7 @@ body {
 }
 
 #spotlight {
-  @media (min-width: 1200px) {
+  @media (min-width: 1000px) {
     position: fixed;
     opacity: 1;
     width: 100vw;

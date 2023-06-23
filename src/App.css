@@ -47,16 +47,7 @@ body {
   font-weight: 400;
   font-size: 3em;
 }
-.hovered-enter-text {
-  -moz-transition: all 0.5s ease-in;
-  -o-transition: all 0.5s ease-in;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
-  color: black;
-  font-weight: 400;
-  font-size: 3em;
-}
-.hovered-enter-text:hover {
+.enter-text:hover {
   cursor: pointer;
   color: white;
   text-shadow: 1px 1px 4px rgb(0, 0, 0);

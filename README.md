@@ -1,3 +1,3 @@
-# React.js personal site
+# React.js portfolio
 
-This is my personal site that I built out to showcase/practice some basic React skills.
+v1 of my personal site/portfolio, built with React/TS.

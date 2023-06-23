@@ -307,30 +307,11 @@ body {
   color: black;
 }
 
-
-.linkedin{
+.linkedin, .github, .resume{
   transition: transform 0.4s ease;
 }
 
-.linkedin:hover{
-  transform: translate(0px, -10px);
-  cursor: pointer;
-}
-
-.github{
-  transition: transform 0.4s ease;
-}
-
-.github:hover{
-  transform: translate(0px, -10px);
-  cursor: pointer;
-}
-
-.resume{
-  transition: transform 0.4s ease;
-}
-
-.resume:hover{
+.linkedin:hover, .github:hover, .resume:hover{
   transform: translate(0px, -10px);
   cursor: pointer;
 }

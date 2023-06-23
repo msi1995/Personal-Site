@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { EntryPage } from "./EntryPage";
-import selfimg from "../video/headshot02.png";
-import cueLogo from "../video/cuelogo.jpg";
-import beaverLogo from "../video/beaverLogo.png";
-import atriumLogo from "../video/atrium.png";
-import linkedinLogo from "../video/linkedinLogo.png";
-import pythonLogo from "../video/pythonLogo.png";
-import reactLogo from "../video/reactLogo.png";
-import crowdcontrolLogo from "../video/crowdcontrolLogo.png";
-import githubLogo from "../video/githubLogo.png";
-import resumeLogo from "../video/resumeLogo.png";
+import { Spotlight } from "./Spotlight";
+import selfimg from "../assets/headshot02.png";
+import cueLogo from "../assets/cuelogo.jpg";
+import beaverLogo from "../assets/beaverLogo.png";
+import atriumLogo from "../assets/atrium.png";
+import linkedinLogo from "../assets/linkedinLogo.png";
+import pythonLogo from "../assets/pythonLogo.png";
+import reactLogo from "../assets/reactLogo.png";
+import crowdcontrolLogo from "../assets/crowdcontrolLogo.png";
+import githubLogo from "../assets/githubLogo.png";
+import resumeLogo from "../assets/resumeLogo.png";
 
 
 export const LandingPage = () => {
@@ -44,6 +45,8 @@ export const LandingPage = () => {
         <EntryPage setEntryPageActive={setEntryPageActive} />
       ) : (
         <>
+        <Spotlight/>
+        <div className="sc-bg"/>
           <div className="top-bar">
             <span className="top-bar-text" onClick={() => doExitThings()}>
               EXIT

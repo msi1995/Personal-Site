@@ -80,12 +80,24 @@ export const LandingPage = () => {
             </span>
           </div>
           {!animationComplete && <div className="fade-in-overlay"></div>}
-          <div className={swappedText ? "main-flex-blackout noselect" : "main-flex"}>
+          <div
+            className={
+              swappedText ? "main-flex-blackout noselect" : "main-flex"
+            }
+          >
             <div className="intro-content">
-              <h4 className={swappedText ? "intro-base intro-blackout" : "intro-base"}>
+              <h4
+                className={
+                  swappedText ? "intro-base intro-blackout" : "intro-base"
+                }
+              >
                 <img
                   alt="Me"
-                  className={swappedText ? "headshot-base headshot-blackout" : "headshot-base"}
+                  className={
+                    swappedText
+                      ? "headshot-base headshot-blackout"
+                      : "headshot-base"
+                  }
                   src={selfimg}
                 ></img>
                 Doug Lloyd
@@ -193,7 +205,11 @@ export const LandingPage = () => {
                 <div className="flex-wrap ws-entry-container">
                   <div className="wps-entry">
                     <p className="entry-title">
-                      <img className="cueLogo" src={cueLogo}></img>
+                      <img
+                        className="cueLogo"
+                        rel="preload"
+                        src={cueLogo}
+                      ></img>
                       <a
                         className="links3"
                         href="https://cuehealth.com/"
@@ -209,7 +225,11 @@ export const LandingPage = () => {
                   </div>
                   <div className="wps-entry">
                     <p className="entry-title">
-                      <img className="iarLogo" src={beaverLogo}></img>
+                      <img
+                        className="iarLogo"
+                        rel="preload"
+                        src={beaverLogo}
+                      ></img>
                       <a
                         className="links3"
                         href="https://iar.oregonstate.edu/"
@@ -226,7 +246,11 @@ export const LandingPage = () => {
                   </div>
                   <div className="wps-entry">
                     <p className="entry-title">
-                      <img className="standardLogo" src={atriumLogo}></img>
+                      <img
+                        className="standardLogo"
+                        rel="preload"
+                        src={atriumLogo}
+                      ></img>
                       Atrium — (2019)
                     </p>
                     <p className="entry-info">
@@ -241,7 +265,11 @@ export const LandingPage = () => {
                 <div className="flex-wrap ws-entry-container">
                   <div className="wps-entry">
                     <p className="entry-title">
-                      <img className="standardLogo" src={pythonLogo} />
+                      <img
+                        className="standardLogo"
+                        rel="preload"
+                        src={pythonLogo}
+                      />
                       Python + Selenium Bot
                     </p>
                     <p className="entry-info">
@@ -254,6 +282,7 @@ export const LandingPage = () => {
                   <div className="wps-entry">
                     <p className="entry-title">
                       <img
+                        rel="preload"
                         className="crowd-control-logo"
                         src={crowdcontrolLogo}
                       />
@@ -268,7 +297,11 @@ export const LandingPage = () => {
                   </div>
                   <div className="wps-entry">
                     <p className="entry-title">
-                      <img className="react-logo" src={reactLogo} />
+                      <img
+                        className="react-logo"
+                        rel="preload"
+                        src={reactLogo}
+                      />
                       NBA Game Finder
                     </p>
                     <p className="entry-info">

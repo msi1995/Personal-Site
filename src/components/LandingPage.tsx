@@ -94,9 +94,9 @@ export const LandingPage = () => {
               </p>
               {swappedText ? (
                 <p className="intro-para">
-                  When I started experimenting with this spotlight feature, I
-                  wanted to figure out how I could really make the user feel
-                  they were discovering something new.
+                  When I started experimenting with the spotlight, I
+                  wanted to figure out how I could engage the user or make them feel
+                  they were discovering something new, and came up with this.
                 </p>
               ) : (
                 <p className="intro-para">
@@ -117,8 +117,8 @@ export const LandingPage = () => {
                 <p className="intro-para">
                   There aren't any other easter eggs around the site for now,
                   but I may add some more in the future. Playing around with CSS
-                  and transitions is super fun for me, but for now I'm out of
-                  ideas. Click the{" "}
+                  and transitions is super fun for me, but I'm out of
+                  ideas for the moment. Click the{" "}
                   <a
                     className="links"
                     href="https://en.wikipedia.org/wiki/Tom_Clancy%27s_Splinter_Cell"

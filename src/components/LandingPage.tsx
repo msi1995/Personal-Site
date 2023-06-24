@@ -21,6 +21,11 @@ export const LandingPage = () => {
   const blackoutAudio = new Audio("/entry.mp3");
   exitAudio.volume = 0.3;
 
+  const preloadAudio = () => {
+    blackoutAudio.load();
+    exitAudio.load();
+  };
+
   const doExitThings = async () => {
     await exitAudio.play();
     await new Promise((resolve) => setTimeout(resolve, 300));
@@ -34,6 +39,11 @@ export const LandingPage = () => {
     }
     setIsDark(!isDark);
   };
+
+  useEffect(() => {
+    preloadAudio();
+  }, []);
+
 
   useEffect(() => {
     if (!entryPageActive) {

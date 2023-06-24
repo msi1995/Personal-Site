@@ -17,6 +17,7 @@ export const LandingPage = () => {
   const [entryPageActive, setEntryPageActive] = useState<boolean>(true);
   const [animationComplete, setAnimationComplete] = useState<boolean>(false);
   const [isDark, setIsDark] = useState(false);
+  const [swappedText, setSwappedText] = useState(false); // need a separate state for this to introduce small delay so text change is never visible. seems to be inconsistent.
   const exitAudio = new Audio("/exit.mp3");
   const blackoutAudio = new Audio("/entry.mp3");
   exitAudio.volume = 0.3;
@@ -38,12 +39,19 @@ export const LandingPage = () => {
       blackoutAudio.play();
     }
     setIsDark(!isDark);
+    if (isDark) {
+      setSwappedText(!swappedText);
+    }
+    if (!isDark) {
+      setTimeout(() => {
+        setSwappedText(!swappedText);
+      }, 100);
+    }
   };
 
   useEffect(() => {
     preloadAudio();
   }, []);
-
 
   useEffect(() => {
     if (!entryPageActive) {
@@ -77,12 +85,12 @@ export const LandingPage = () => {
                 Doug Lloyd
               </h4>
               <p className="intro-para">
-                {isDark
+                {swappedText
                   ? `As you can tell, I really enjoy building unique and engaging frontend experiences.`
                   : `I'm a Full Stack Software Engineer specializing in React.js with
                 TypeScript.`}
               </p>
-              {isDark ? (
+              {swappedText ? (
                 <p className="intro-para">
                   When I started experimenting with this spotlight feature, I
                   wanted to figure out how I could really make the user feel
@@ -103,12 +111,21 @@ export const LandingPage = () => {
                   and occasionally C++.
                 </p>
               )}
-              {isDark ? (
-                <p className="intro-para">There aren't any other easter eggs around the site for now, but I may add some more in the future. Playing around with CSS and transitions is super fun for me, but for now I'm out of ideas. Click the <a
-                className="links"
-                href="https://en.wikipedia.org/wiki/Tom_Clancy%27s_Splinter_Cell"
-                target="_blank"
-              >Sam Fisher</a> picture again to turn the lights back on. Thanks for coming!</p>
+              {swappedText ? (
+                <p className="intro-para">
+                  There aren't any other easter eggs around the site for now,
+                  but I may add some more in the future. Playing around with CSS
+                  and transitions is super fun for me, but for now I'm out of
+                  ideas. Click the{" "}
+                  <a
+                    className="links"
+                    href="https://en.wikipedia.org/wiki/Tom_Clancy%27s_Splinter_Cell"
+                    target="_blank"
+                  >
+                    Sam Fisher
+                  </a>{" "}
+                  picture again to turn the lights back on. Thanks for coming!
+                </p>
               ) : (
                 <p className="intro-para">
                   In my spare time, you'll probably find me in the gym

@@ -32,6 +32,8 @@ export const LandingPage = () => {
     await new Promise((resolve) => setTimeout(resolve, 300));
     setAnimationComplete(false);
     setEntryPageActive(true);
+    setIsDark(false);
+    setSwappedText(false);
   };
 
   const blackout = () => {

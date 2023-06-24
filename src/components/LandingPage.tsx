@@ -47,7 +47,7 @@ export const LandingPage = () => {
     if (!isDark) {
       setTimeout(() => {
         setSwappedText(!swappedText);
-      }, 100);
+      }, 250);
     }
   };
 
@@ -80,23 +80,29 @@ export const LandingPage = () => {
             </span>
           </div>
           {!animationComplete && <div className="fade-in-overlay"></div>}
-          <div className="main-flex">
+          <div className={swappedText ? "main-flex-blackout" : "main-flex"}>
             <div className="intro-content">
               <h4 className="intro">
-                <img alt="Me" className="headshot" src={selfimg}></img>
+                <img alt="Me" className={swappedText ? "headshot-blackout" : "headshot"}src={selfimg}></img>
                 Doug Lloyd
               </h4>
-              <p className="intro-para">
-                {swappedText
-                  ? `As you can tell, I really enjoy building unique and engaging frontend experiences.`
-                  : `I'm a Full Stack Software Engineer specializing in React.js with
-                TypeScript.`}
-              </p>
               {swappedText ? (
                 <p className="intro-para">
-                  When I started experimenting with the spotlight, I
-                  wanted to figure out how I could engage the user or make them feel
-                  they were discovering something new, and came up with this.
+                  As you can tell, I really enjoy building unique and engaging
+                  frontend experiences.
+                </p>
+              ) : (
+                <p className="intro-para">
+                  {" "}
+                  I'm a Full Stack Software Engineer specializing in React.js
+                  with TypeScript.
+                </p>
+              )}
+              {swappedText ? (
+                <p className="intro-para">
+                  When I started experimenting with the spotlight, I wanted to
+                  figure out how I could engage the user or make them feel they
+                  were discovering something new, and came up with this.
                 </p>
               ) : (
                 <p className="intro-para">
@@ -117,8 +123,8 @@ export const LandingPage = () => {
                 <p className="intro-para">
                   There aren't any other easter eggs around the site for now,
                   but I may add some more in the future. Playing around with CSS
-                  and transitions is super fun for me, but I'm out of
-                  ideas for the moment. Click the{" "}
+                  and transitions is super fun for me, but I'm out of ideas for
+                  the moment. Click the{" "}
                   <a
                     className="links"
                     href="https://en.wikipedia.org/wiki/Tom_Clancy%27s_Splinter_Cell"
@@ -152,15 +158,30 @@ export const LandingPage = () => {
                   these!
                 </p>
               )}
-              <p className="intro-para">
-                Want to talk? Critique my CSS?{" "}
-                <a className="links" href="mailto:lloyd.dg7@gmail.com">
-                  Shoot me an email here.
-                </a>
-              </p>
-              <p className="intro-para">
-                I'm always open to opportunities to better myself.
-              </p>
+              {swappedText ? (
+                <p className="intro-para">
+                  Want to talk? Critique my CSS?{" "}
+                  <a className="links" href="mailto:lloyd.dg7@gmail.com">
+                    Shoot me an email here.
+                  </a>
+                </p>
+              ) : (
+                <p className="intro-para">
+                  Want to talk? Critique my CSS?{" "}
+                  <a className="links" href="mailto:lloyd.dg7@gmail.com">
+                    Shoot me an email here.
+                  </a>
+                </p>
+              )}
+              {swappedText ? (
+                <p className="intro-para">
+                  I'm always open to opportunities to better myself.
+                </p>
+              ) : (
+                <p className="intro-para">
+                  I'm always open to opportunities to better myself.
+                </p>
+              )}
             </div>
             <div className="main-content">
               <section className="flex-wrap section work-section">
@@ -264,7 +285,7 @@ export const LandingPage = () => {
                 target="_blank"
                 className="footer-text links2 linkedin"
               >
-                <img className="clickableLogos" src={linkedinLogo} />
+                <img className={swappedText ? "clickableLogos-blackout"  : "clickableLogos"} src={linkedinLogo} />
               </a>
               <Link
                 to={"/resume"}
@@ -272,14 +293,14 @@ export const LandingPage = () => {
                 rel="noopener noreferrer"
                 className="footer-text links2 resume"
               >
-                <img className="clickableLogos resumeLogo" src={resumeLogo} />
+                <img className={swappedText ? "clickableLogos-blackout resumeLogo" : "clickableLogos resumeLogo"} src={resumeLogo} />
               </Link>
               <a
                 href="https://github.com/msi1995"
                 target="_blank"
                 className="footer-text links2 github"
               >
-                <img className="clickableLogos githubLogo" src={githubLogo} />
+                <img className={swappedText ? "clickableLogos-blackout githubLogo" : "clickableLogos, githubLogo"} src={githubLogo} />
               </a>
             </div>
           </div>

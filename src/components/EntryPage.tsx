@@ -5,7 +5,7 @@ interface EntryPageProps {
 }
 
 export const EntryPage = ({ setEntryPageActive }: EntryPageProps) => {
-  const entryAudio = new Audio("/entry.mp3");
+  const entryAudio = new Audio("/doorunlocking.mp3");
 
   const doEntryThings = async () => {
     await entryAudio.play();

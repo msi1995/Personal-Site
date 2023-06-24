@@ -13,12 +13,12 @@ import crowdcontrolLogo from "../assets/crowdcontrolLogo.png";
 import githubLogo from "../assets/githubLogo.png";
 import resumeLogo from "../assets/resumeLogo.png";
 
-
 export const LandingPage = () => {
-
   const [entryPageActive, setEntryPageActive] = useState<boolean>(true);
   const [animationComplete, setAnimationComplete] = useState<boolean>(false);
+  const [isDark, setIsDark] = useState(false);
   const exitAudio = new Audio("/exit.mp3");
+  const blackoutAudio = new Audio("/entry.mp3");
   exitAudio.volume = 0.3;
 
   const doExitThings = async () => {
@@ -28,25 +28,32 @@ export const LandingPage = () => {
     setEntryPageActive(true);
   };
 
+  const blackout = () => {
+    if (!isDark) {
+      blackoutAudio.play();
+    }
+    setIsDark(!isDark);
+  };
+
   useEffect(() => {
     if (!entryPageActive) {
       const timer = setTimeout(() => {
         setAnimationComplete(true);
-      }, 3000);
+      }, 2000);
       return () => clearTimeout(timer);
     } else {
       setAnimationComplete(false);
     }
   }, [entryPageActive]);
 
-    return(
+  return (
     <div className="App">
       {entryPageActive ? (
         <EntryPage setEntryPageActive={setEntryPageActive} />
       ) : (
         <>
-        <Spotlight/>
-        <div className="sc-bg"/>
+          <div className="sc-bg" onClick={() => blackout()} />
+          <Spotlight blackout={isDark} />
           <div className="top-bar">
             <span className="top-bar-text" onClick={() => doExitThings()}>
               EXIT
@@ -60,43 +67,62 @@ export const LandingPage = () => {
                 Doug Lloyd
               </h4>
               <p className="intro-para">
-                I'm a Full Stack Software Engineer specializing in React.js with
-                TypeScript.
+                {isDark
+                  ? `As you can tell, I really enjoy building unique and engaging frontend experiences.`
+                  : `I'm a Full Stack Software Engineer specializing in React.js with
+                TypeScript.`}
               </p>
-              <p className="intro-para">
-                I spent 2022-23 at{" "}
-                <a
-                  className="links"
-                  href="https://cuehealth.com/"
-                  target="_blank"
-                >
-                  Cue Health
-                </a>{" "}
-                working with the MERN stack to create groundbreaking telehealth
-                functionality, and am also comfortable with Python and
-                occasionally C++.
-              </p>
-              <p className="intro-para">
-                In my spare time, you'll probably find me in the gym
-                powerlifting with my{" "}
-                <a
-                  className="links"
-                  href="https://www.openpowerlifting.org/u/teagancouch"
-                  target="_blank"
-                >
-                  girlfriend
-                </a>
-                , grinding ranked on{" "}
-                <a
-                  className="links"
-                  href="https://playvalorant.com/en-us/"
-                  target="_blank"
-                >
-                  VALORANT
-                </a>
-                , or waiting for the next Splinter Cell game. I can only hope to
-                one day be as good at software development as I am at these!
-              </p>
+              {isDark ? (
+                <p className="intro-para">
+                  When I started experimenting with this spotlight feature, I
+                  wanted to figure out how I could really make the user feel
+                  they were discovering something new.
+                </p>
+              ) : (
+                <p className="intro-para">
+                  I spent 2022-23 at{" "}
+                  <a
+                    className="links"
+                    href="https://cuehealth.com/"
+                    target="_blank"
+                  >
+                    Cue Health
+                  </a>{" "}
+                  working with the MERN stack to create groundbreaking
+                  telehealth functionality, and am also comfortable with Python
+                  and occasionally C++.
+                </p>
+              )}
+              {isDark ? (
+                <p className="intro-para">There aren't any other easter eggs around the site for now, but I may add some more in the future. Playing around with CSS and transitions is super fun for me, but for now I'm out of ideas. Click the <a
+                className="links"
+                href="https://en.wikipedia.org/wiki/Tom_Clancy%27s_Splinter_Cell"
+                target="_blank"
+              >Sam Fisher</a> picture again to turn the lights back on. Thanks for coming!</p>
+              ) : (
+                <p className="intro-para">
+                  In my spare time, you'll probably find me in the gym
+                  powerlifting with my{" "}
+                  <a
+                    className="links"
+                    href="https://www.openpowerlifting.org/u/teagancouch"
+                    target="_blank"
+                  >
+                    girlfriend
+                  </a>
+                  , grinding ranked on{" "}
+                  <a
+                    className="links"
+                    href="https://playvalorant.com/en-us/"
+                    target="_blank"
+                  >
+                    VALORANT
+                  </a>
+                  , or waiting for the next Splinter Cell game. I can only hope
+                  to one day be as good at software development as I am at
+                  these!
+                </p>
+              )}
               <p className="intro-para">
                 Want to talk? Critique my CSS?{" "}
                 <a className="links" href="mailto:lloyd.dg7@gmail.com">
@@ -150,7 +176,8 @@ export const LandingPage = () => {
                       Atrium — (2019)
                     </p>
                     <p className="entry-info">
-                      SWE Intern working on bug fixes, frontend components, and documentation.
+                      SWE Intern working on bug fixes, frontend components, and
+                      documentation.
                     </p>
                   </div>
                 </div>
@@ -159,7 +186,10 @@ export const LandingPage = () => {
                 Projects
                 <div className="flex-wrap ws-entry-container">
                   <div className="wps-entry">
-                    <p className="entry-title"><img className="standardLogo" src={pythonLogo}/>Python + Selenium Bot</p>
+                    <p className="entry-title">
+                      <img className="standardLogo" src={pythonLogo} />
+                      Python + Selenium Bot
+                    </p>
                     <p className="entry-info">
                       My first ever Python project way back in 2020. I wrote a
                       Selenium bot to navigate a complex reservation process to
@@ -168,7 +198,13 @@ export const LandingPage = () => {
                     </p>
                   </div>
                   <div className="wps-entry">
-                    <p className="entry-title"><img className="crowd-control-logo" src={crowdcontrolLogo}/>CrowdControl (WIP)</p>
+                    <p className="entry-title">
+                      <img
+                        className="crowd-control-logo"
+                        src={crowdcontrolLogo}
+                      />
+                      CrowdControl (WIP)
+                    </p>
                     <p className="entry-info">
                       I tried my hand at React Native with CrowdControl. Aimed
                       at improving live event/festival safety by connecting
@@ -177,7 +213,10 @@ export const LandingPage = () => {
                     </p>
                   </div>
                   <div className="wps-entry">
-                    <p className="entry-title"><img className="react-logo" src={reactLogo}/>NBA Game Finder</p>
+                    <p className="entry-title">
+                      <img className="react-logo" src={reactLogo} />
+                      NBA Game Finder
+                    </p>
                     <p className="entry-info">
                       React SPA that allows users to select and fetch info about
                       a team and their games played in a desired season. Made
@@ -199,7 +238,7 @@ export const LandingPage = () => {
                 <img className="clickableLogos" src={linkedinLogo} />
               </a>
               <Link
-                to={'/resume'}
+                to={"/resume"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-text links2 resume"
@@ -218,5 +257,5 @@ export const LandingPage = () => {
         </>
       )}
     </div>
-    )
-}
+  );
+};

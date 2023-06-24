@@ -1,26 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
-export const Spotlight: React.FC = () => {
-  useEffect(() => {
+interface SpotlightProps {
+  blackout: boolean;
+}
 
-    //required to prevent darkening not applying until initial mouse movement
-    const spotlight = document.querySelector("#spotlight") as HTMLElement;
-    spotlight.style.background = `radial-gradient(circle at 0px 0px, #00000000 20px, #00000050 350px)`;
+export const Spotlight: React.FC<SpotlightProps> = ({ blackout }) => {
+    const mousePositionRef = useRef({ clientX: 0, clientY: 0 });
 
-    const handleMouseMove = (event: MouseEvent) => {
-      const spotlight = document.querySelector("#spotlight") as HTMLElement;
-      const { clientX = 0, clientY = 0  } = event;
-
-      setTimeout(() => {
-        spotlight.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 20px, #0000006a 350px)`;
-      }, 75);
+    useEffect(() => {
+        const spotlight = document.querySelector("#spotlight") as HTMLElement;
+        const spotlightBG = blackout ? `#000000 350px` : `#0000006a 350px`;
+        spotlight.style.background = `radial-gradient(circle at ${mousePositionRef.current.clientX}px ${mousePositionRef.current.clientY}px, #00000000 20px, ${spotlightBG})`;
+    
+        const handleMouseMove = (event: MouseEvent) => {
+          const { clientX = 0, clientY = 0 } = event;
+          mousePositionRef.current.clientX = clientX;
+      mousePositionRef.current.clientY = clientY;
+          setTimeout(() => {
+            spotlight.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 20px, ${spotlightBG})`;
+          }, 75);
+        };
+    
+        document.addEventListener("mousemove", handleMouseMove);
+        return () => {
+          document.removeEventListener("mousemove", handleMouseMove);
+        };
+      }, [blackout]);
+    
+      return <div id="spotlight"></div>;
     };
-
-    document.addEventListener("mousemove", handleMouseMove);
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
-
-  return <div id="spotlight"></div>;
-};

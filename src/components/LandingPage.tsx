@@ -80,16 +80,20 @@ export const LandingPage = () => {
             </span>
           </div>
           {!animationComplete && <div className="fade-in-overlay"></div>}
-          <div className={swappedText ? "main-flex-blackout" : "main-flex"}>
+          <div className={swappedText ? "main-flex-blackout noselect" : "main-flex"}>
             <div className="intro-content">
-              <h4 className="intro">
-                <img alt="Me" className={swappedText ? "headshot-blackout" : "headshot"}src={selfimg}></img>
+              <h4 className={swappedText ? "intro-base intro-blackout" : "intro-base"}>
+                <img
+                  alt="Me"
+                  className={swappedText ? "headshot-base headshot-blackout" : "headshot-base"}
+                  src={selfimg}
+                ></img>
                 Doug Lloyd
               </h4>
               {swappedText ? (
                 <p className="intro-para">
-                  As you can tell, I really enjoy building unique and engaging
-                  frontend experiences.
+                  As you can hopefully tell, I really enjoy building unique and
+                  engaging frontend experiences.
                 </p>
               ) : (
                 <p className="intro-para">
@@ -100,9 +104,9 @@ export const LandingPage = () => {
               )}
               {swappedText ? (
                 <p className="intro-para">
-                  When I started experimenting with the spotlight, I wanted to
-                  figure out how I could engage the user or make them feel they
-                  were discovering something new, and came up with this.
+                  When I started experimenting with spotlight effects, I wanted
+                  to figure out how I could engage users or make them feel like
+                  they were discovering something new, and came up with this.
                 </p>
               ) : (
                 <p className="intro-para">
@@ -121,10 +125,10 @@ export const LandingPage = () => {
               )}
               {swappedText ? (
                 <p className="intro-para">
-                  There aren't any other easter eggs around the site for now,
+                  There aren't any other easter eggs around the site currently,
                   but I may add some more in the future. Playing around with CSS
                   and transitions is super fun for me, but I'm out of ideas for
-                  the moment. Click the{" "}
+                  now. Click the{" "}
                   <a
                     className="links"
                     href="https://en.wikipedia.org/wiki/Tom_Clancy%27s_Splinter_Cell"
@@ -285,7 +289,12 @@ export const LandingPage = () => {
                 target="_blank"
                 className="footer-text links2 linkedin"
               >
-                <img className={swappedText ? "clickableLogos-blackout"  : "clickableLogos"} src={linkedinLogo} />
+                <img
+                  className={
+                    swappedText ? "clickableLogos-blackout" : "clickableLogos"
+                  }
+                  src={linkedinLogo}
+                />
               </a>
               <Link
                 to={"/resume"}
@@ -293,14 +302,28 @@ export const LandingPage = () => {
                 rel="noopener noreferrer"
                 className="footer-text links2 resume"
               >
-                <img className={swappedText ? "clickableLogos-blackout resumeLogo" : "clickableLogos resumeLogo"} src={resumeLogo} />
+                <img
+                  className={
+                    swappedText
+                      ? "clickableLogos-blackout resumeLogo"
+                      : "clickableLogos resumeLogo"
+                  }
+                  src={resumeLogo}
+                />
               </Link>
               <a
                 href="https://github.com/msi1995"
                 target="_blank"
                 className="footer-text links2 github"
               >
-                <img className={swappedText ? "clickableLogos-blackout githubLogo" : "clickableLogos, githubLogo"} src={githubLogo} />
+                <img
+                  className={
+                    swappedText
+                      ? "clickableLogos-blackout githubLogo"
+                      : "clickableLogos, githubLogo"
+                  }
+                  src={githubLogo}
+                />
               </a>
             </div>
           </div>

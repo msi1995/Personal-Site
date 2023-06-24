@@ -9,7 +9,7 @@ export const Spotlight: React.FC<SpotlightProps> = ({ blackout }) => {
 
     useEffect(() => {
         const spotlight = document.querySelector("#spotlight") as HTMLElement;
-        const spotlightBG = blackout ? `#000000 350px` : `#0000006a 350px`;
+        const spotlightBG = blackout ? `#000000 400px` : `#0000006a 350px`;
         spotlight.style.background = `radial-gradient(circle at ${mousePositionRef.current.clientX}px ${mousePositionRef.current.clientY}px, #00000000 20px, ${spotlightBG})`;
     
         const handleMouseMove = (event: MouseEvent) => {
@@ -18,7 +18,7 @@ export const Spotlight: React.FC<SpotlightProps> = ({ blackout }) => {
       mousePositionRef.current.clientY = clientY;
           setTimeout(() => {
             spotlight.style.background = `radial-gradient(circle at ${clientX}px ${clientY}px, #00000000 20px, ${spotlightBG})`;
-          }, 75);
+          }, 100);
         };
     
         document.addEventListener("mousemove", handleMouseMove);

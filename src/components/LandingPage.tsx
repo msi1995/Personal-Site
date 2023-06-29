@@ -110,8 +110,7 @@ export const LandingPage = () => {
               ) : (
                 <p className="intro-para">
                   {" "}
-                  I'm a Full Stack Software Engineer specializing in React.js
-                  with TypeScript.
+                  I'm a Full Stack Software Engineer who especially enjoys working with TypeScript and React.
                 </p>
               )}
               {swappedText ? (
@@ -130,9 +129,14 @@ export const LandingPage = () => {
                   >
                     Cue Health
                   </a>{" "}
-                  working with the MERN stack to create groundbreaking
-                  telehealth functionality, and am also comfortable with Python
-                  and occasionally C++.
+                  working with the <a
+                    className="links"
+                    href="https://www.mongodb.com/mern-stack#:~:text=MERN%20stands%20for%20MongoDB%2C%20Express,a%20client%2Dside%20JavaScript%20framework"
+                    target="_blank"
+                  >
+                    MERN
+                  </a>{" "} stack to create groundbreaking
+                  telehealth functionality. I'm also comfortable with Python, and am constantly learning new tech.
                 </p>
               )}
               {swappedText ? (
@@ -178,15 +182,27 @@ export const LandingPage = () => {
                 <p className="intro-para">
                   Want to talk? Critique my CSS?{" "}
                   <a className="links" href="mailto:lloyd.dg7@gmail.com">
-                    Shoot me an email here.
+                    Shoot me an email here, 
                   </a>
+                  {" "}<span>or check out my</span>{" "}
+                  <a
+                    className="links"
+                    href="/resume"
+                    target="_blank"
+                  >resume.</a>
                 </p>
               ) : (
                 <p className="intro-para">
                   Want to talk? Critique my CSS?{" "}
                   <a className="links" href="mailto:lloyd.dg7@gmail.com">
-                    Shoot me an email here.
+                    Shoot me an email here,
                   </a>
+                  {" "}<span>or check out my</span>{" "}
+                  <a
+                    className="links"
+                    href="/resume"
+                    target="_blank"
+                  >resume.</a>
                 </p>
               )}
               {swappedText ? (

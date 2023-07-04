@@ -174,7 +174,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .main-flex-blackout {
@@ -199,6 +199,7 @@ body {
     width: 55rem !important;
     padding: 2em !important;
     padding-bottom: 2em !important;
+    padding-top: 0em !important;
     margin-right: 16em !important;
   }
 }

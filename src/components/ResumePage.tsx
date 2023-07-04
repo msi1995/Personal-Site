@@ -1,4 +1,4 @@
-import Resume from "../files/Lloyd_Doug_ResumeA.pdf";
+import Resume from "../files/Lloyd_Doug_Resume.pdf";
 export const ResumePage = () => {
   return (
     <div className="embed-responsive" style={{ height: "100vh", backgroundColor: 'white'}}>

@@ -8,7 +8,7 @@ import beaverLogo from "../assets/beaverLogo.png";
 import atriumLogo from "../assets/atrium.png";
 import linkedinLogo from "../assets/linkedinLogo.png";
 import pythonLogo from "../assets/pythonLogo.png";
-import reactLogo from "../assets/reactLogo.png";
+import teaganLogo from "../assets/tgnlogotightcrop.png";
 import crowdcontrolLogo from "../assets/crowdcontrolLogo.png";
 import githubLogo from "../assets/githubLogo.png";
 import resumeLogo from "../assets/resumeLogo.png";
@@ -110,7 +110,8 @@ export const LandingPage = () => {
               ) : (
                 <p className="intro-para">
                   {" "}
-                  I'm a Full Stack Software Engineer who especially enjoys working with TypeScript and React.
+                  I'm a Full Stack Software Engineer who especially enjoys
+                  working with TypeScript and React.
                 </p>
               )}
               {swappedText ? (
@@ -129,14 +130,17 @@ export const LandingPage = () => {
                   >
                     Cue Health
                   </a>{" "}
-                  working with the <a
+                  working with the{" "}
+                  <a
                     className="links"
                     href="https://www.mongodb.com/mern-stack#:~:text=MERN%20stands%20for%20MongoDB%2C%20Express,a%20client%2Dside%20JavaScript%20framework"
                     target="_blank"
                   >
                     MERN
-                  </a>{" "} stack to create groundbreaking
-                  telehealth functionality. I'm also comfortable with Python, and am constantly learning new tech.
+                  </a>{" "}
+                  stack to create groundbreaking telehealth functionality. I'm
+                  also comfortable with Python, and am constantly learning new
+                  tech.
                 </p>
               )}
               {swappedText ? (
@@ -182,27 +186,23 @@ export const LandingPage = () => {
                 <p className="intro-para">
                   Want to talk? Critique my CSS?{" "}
                   <a className="links" href="mailto:lloyd.dg7@gmail.com">
-                    Shoot me an email here, 
+                    Shoot me an email here,
+                  </a>{" "}
+                  <span>or check out my</span>{" "}
+                  <a className="links" href="/resume" target="_blank">
+                    resume.
                   </a>
-                  {" "}<span>or check out my</span>{" "}
-                  <a
-                    className="links"
-                    href="/resume"
-                    target="_blank"
-                  >resume.</a>
                 </p>
               ) : (
                 <p className="intro-para">
                   Want to talk? Critique my CSS?{" "}
                   <a className="links" href="mailto:lloyd.dg7@gmail.com">
                     Shoot me an email here,
+                  </a>{" "}
+                  <span>or check out my</span>{" "}
+                  <a className="links" href="/resume" target="_blank">
+                    resume.
                   </a>
-                  {" "}<span>or check out my</span>{" "}
-                  <a
-                    className="links"
-                    href="/resume"
-                    target="_blank"
-                  >resume.</a>
                 </p>
               )}
               {swappedText ? (
@@ -279,7 +279,25 @@ export const LandingPage = () => {
               <section className="flex-wrap section project-section">
                 Projects
                 <div className="flex-wrap ws-entry-container">
+                <div className="wps-entry">
+                    <a href="https://www.teagantails.com" className="links3" target="_blank">
+                      <p className="entry-title">
+                        <img
+                          className="teagan-logo"
+                          rel="preload"
+                          src={teaganLogo}
+                        />
+                        Teagantails.com
+                      </p>
+                    </a>
+                    <p className="entry-info">
+                      React + Express SPA built for my girlfriend to grow her personal business.
+                      MongoDB Atlas backend handles review submission and
+                      display. EmailJS contact forms. Built with MERN stack and Tailwind CSS
+                    </p>
+                  </div>
                   <div className="wps-entry">
+                  <a href="https://github.com/msi1995/Python-Selenium-Bot" className="links3" target="_blank">
                     <p className="entry-title">
                       <img
                         className="standardLogo"
@@ -289,11 +307,12 @@ export const LandingPage = () => {
                       Python + Selenium Bot
                     </p>
                     <p className="entry-info">
-                      My first ever Python project way back in 2020. I wrote a
+                      My first ever Python project back in 2020. I wrote a
                       Selenium bot to navigate a complex reservation process to
-                      ensure I always got a spot at my university gym during
+                      ensure that I always got a spot at my university gym during
                       limited access due to COVID.
                     </p>
+                    </a>
                   </div>
                   <div className="wps-entry">
                     <p className="entry-title">
@@ -309,22 +328,6 @@ export const LandingPage = () => {
                       at improving live event/festival safety by connecting
                       event organizers and attendees via push
                       messages/notifications.{" "}
-                    </p>
-                  </div>
-                  <div className="wps-entry">
-                    <p className="entry-title">
-                      <img
-                        className="react-logo"
-                        rel="preload"
-                        src={reactLogo}
-                      />
-                      NBA Game Finder
-                    </p>
-                    <p className="entry-info">
-                      React SPA that allows users to select and fetch info about
-                      a team and their games played in a desired season. Made
-                      with Express, Bootstrap, Material UI. Mostly done as UI
-                      practice.
                     </p>
                   </div>
                 </div>

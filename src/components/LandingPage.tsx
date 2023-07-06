@@ -110,7 +110,7 @@ export const LandingPage = () => {
               ) : (
                 <p className="intro-para">
                   {" "}
-                  I'm a Full Stack Software Engineer who especially enjoys
+                  I'm a Software Engineer who especially enjoys
                   working with TypeScript and React.
                 </p>
               )}

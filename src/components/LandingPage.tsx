@@ -82,7 +82,7 @@ export const LandingPage = () => {
           {!animationComplete && <div className="fade-in-overlay"></div>}
           <div
             className={
-              swappedText ? "main-flex-blackout noselect" : "main-flex"
+              swappedText ? "main-flex blackout noselect" : "main-flex"
             }
           >
             <div className="intro-content">

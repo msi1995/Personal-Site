@@ -110,8 +110,8 @@ export const LandingPage = () => {
               ) : (
                 <p className="intro-para">
                   {" "}
-                  I'm a Software Engineer who especially enjoys
-                  working with TypeScript and React.
+                  I'm a Software Engineer who especially enjoys working with
+                  TypeScript and React.
                 </p>
               )}
               {swappedText ? (
@@ -169,17 +169,7 @@ export const LandingPage = () => {
                   >
                     girlfriend
                   </a>
-                  , grinding ranked on{" "}
-                  <a
-                    className="links"
-                    href="https://playvalorant.com/en-us/"
-                    target="_blank"
-                  >
-                    VALORANT
-                  </a>
-                  , or waiting for the next Splinter Cell game. I can only hope
-                  to one day be as good at software development as I am at
-                  these!
+                  , trying to improve my mile time, or waiting for the next Splinter Cell game. I aspire to one day be as good at software development as I am at powerlifting!
                 </p>
               )}
               {swappedText ? (
@@ -279,8 +269,12 @@ export const LandingPage = () => {
               <section className="flex-wrap section project-section">
                 Projects
                 <div className="flex-wrap ws-entry-container">
-                <div className="wps-entry">
-                    <a href="https://www.teagantails.com" className="links3" target="_blank">
+                  <div className="wps-entry">
+                    <a
+                      href="https://www.teagantails.com"
+                      className="links3"
+                      target="_blank"
+                    >
                       <p className="entry-title">
                         <img
                           className="teagan-logo"
@@ -291,27 +285,32 @@ export const LandingPage = () => {
                       </p>
                     </a>
                     <p className="entry-info">
-                      React + Express SPA built for my girlfriend to grow her personal business.
-                      MongoDB Atlas backend handles review submission and
-                      display. EmailJS contact forms. Built with MERN stack and Tailwind CSS
+                      React + Express SPA built for my girlfriend to grow her
+                      personal business. MongoDB Atlas backend handles review
+                      submission and display. EmailJS contact forms. Built with
+                      MERN stack and Tailwind CSS
                     </p>
                   </div>
                   <div className="wps-entry">
-                  <a href="https://github.com/msi1995/Python-Selenium-Bot" className="links3" target="_blank">
-                    <p className="entry-title">
-                      <img
-                        className="standardLogo"
-                        rel="preload"
-                        src={pythonLogo}
-                      />
-                      Python + Selenium Bot
-                    </p>
-                    <p className="entry-info">
-                      My first ever Python project back in 2020. I wrote a
-                      Selenium bot to navigate a complex reservation process to
-                      ensure that I always got a spot at my university gym during
-                      limited access due to COVID.
-                    </p>
+                    <a
+                      href="https://github.com/msi1995/Python-Selenium-Bot"
+                      className="links3"
+                      target="_blank"
+                    >
+                      <p className="entry-title">
+                        <img
+                          className="standardLogo"
+                          rel="preload"
+                          src={pythonLogo}
+                        />
+                        Python + Selenium Bot
+                      </p>
+                      <p className="entry-info">
+                        My first ever Python project back in 2020. I wrote a
+                        Selenium bot to navigate a complex reservation process
+                        to ensure that I always got a spot at my university gym
+                        during limited access due to COVID.
+                      </p>
                     </a>
                   </div>
                   <div className="wps-entry">

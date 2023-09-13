@@ -290,16 +290,24 @@ body {
 .standardLogo {
   margin-top: 4px;
   margin-right: 8px;
-  height: 28px;
-  width: 28px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
 }
 
 .teagan-logo {
   margin-top: 4px;
   margin-right: 12px;
-  height: 32px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
+  border-radius: 10%;
+}
+
+.miu-logo{
+  margin-top: 4px;
+  margin-right: 12px;
+  height: 40px;
+  width: 40px;
   border-radius: 10%;
 }
 
@@ -323,6 +331,14 @@ body {
   margin-right: 8px;
   height: 26px;
   width: 40px;
+  border-radius: 50%;
+}
+
+.atriumLogo{
+  margin-top: 4px;
+  margin-right: 8px;
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
 }
 

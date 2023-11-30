@@ -170,7 +170,9 @@ export const LandingPage = () => {
                   >
                     girlfriend
                   </a>
-                  , trying to improve my mile time, or waiting for the next Splinter Cell game. I aspire to one day be as good at software development as I am at powerlifting!
+                  , trying to improve my mile time, or waiting for the next
+                  Splinter Cell game. I aspire to one day be as good at software
+                  development as I am at powerlifting!
                 </p>
               )}
               {swappedText ? (
@@ -270,23 +272,22 @@ export const LandingPage = () => {
               <section className="flex-wrap section project-section">
                 Projects
                 <div className="flex-wrap ws-entry-container">
-                <div className="wps-entry">
+                  <div className="wps-entry">
                     <a
                       href="https://www.marbleladder.com"
                       className="links3"
                       target="_blank"
                     >
                       <p className="entry-title">
-                        <img
-                          className="miu-logo"
-                          rel="preload"
-                          src={MIULogo}
-                        />
+                        <img className="miu-logo" rel="preload" src={MIULogo} />
                         MarbleLadder.com
                       </p>
                     </a>
                     <p className="entry-info">
-                      React SPA featuring player-to-player match reporting, global leaderboards, ELO rating & more for the game 'Marble It Up!'. Peak of ~50 daily users and pinned by creators of the game in the official Discord server.  
+                      React SPA featuring player-to-player match reporting,
+                      global leaderboards, ELO rating & more for the game
+                      'Marble It Up!'. Peak of ~50 daily users and pinned by
+                      creators of the game in the official Discord server.
                     </p>
                   </div>
                   <div className="wps-entry">

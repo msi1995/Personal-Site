@@ -2,17 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { EntryPage } from "./EntryPage";
 import { Spotlight } from "./Spotlight";
-import selfimg from "../assets/headshot02.png";
+import selfimg from "../assets/headshot02.avif";
 import cueLogo from "../assets/cuelogo.jpg";
-import beaverLogo from "../assets/beaverLogo.png";
-import atriumLogo from "../assets/atrium.png";
-import linkedinLogo from "../assets/linkedinLogo.png";
-import pythonLogo from "../assets/pythonLogo.png";
-import teaganLogo from "../assets/tgnlogotightcrop.png";
-import crowdcontrolLogo from "../assets/crowdcontrolLogo.png";
-import MIULogo from "../assets/miu_tight_crop.png";
-import githubLogo from "../assets/githubLogo.png";
-import resumeLogo from "../assets/resumeLogo.png";
+import beaverLogo from "../assets/beaverLogosmall.avif";
+import atriumLogo from "../assets/atrium.avif";
+import linkedinLogo from "../assets/linkedinLogo.avif";
+import pythonLogo from "../assets/pythonLogo.avif";
+import teaganLogo from "../assets/tgnlogotightcrop.avif";
+import MIULogo from "../assets/miu_tight_crop.avif";
+import githubLogo from "../assets/githubLogo.avif";
+import resumeLogo from "../assets/resumeLogo.avif";
 
 export const LandingPage = () => {
   const [entryPageActive, setEntryPageActive] = useState<boolean>(true);
